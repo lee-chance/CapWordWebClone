@@ -1,48 +1,32 @@
 # CapWord 웹 클론
 
-CapWord 웹 서비스 클론코딩용 저장소입니다. 초기 스캐폴드는 Next.js(App Router) + TypeScript + Tailwind CSS입니다.
+CapWords 스타일의 **단어 학습 웹 데모**(비공식)입니다. Next.js(App Router) + TypeScript + Tailwind CSS로 구현했습니다.
 
----
-
-# CapWord 웹 클론
-
-CapWord 웹 서비스 클론코딩용 저장소입니다. 초기 스캐폴드는 Next.js(App Router) + TypeScript + Tailwind CSS입니다.
-
----
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## 로컬에서 바로 보기
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 `http://localhost:3000` — 플래시카드 데모는 `/demo` 입니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 공개 URL (GitHub Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`main`에 푸시하면 `.github/workflows/deploy-pages.yml`이 정적 사이트를 빌드해 Pages에 올립니다.
 
-## Learn More
+1. 저장소 **Settings → Pages → Build and deployment**
+2. Source를 **GitHub Actions**로 선택 (처음 한 번)
+3. 배포가 끝나면 보통 아래 주소로 접속합니다:  
+   **https://lee-chance.github.io/CapWordWebClone/**
 
-To learn more about Next.js, take a look at the following resources:
+> 프로젝트 Pages는 하위 경로(`/CapWordWebClone`)로 호스팅되므로 워크플로에서 `BASE_PATH`를 설정합니다. 로컬 개발은 경로 없이 루트에서 동작합니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 빌드
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build   # 결과물은 out/ (gitignore)
+npm run lint
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+원작 앱은 [CapWords](https://capwords.app/) 입니다. 본 저장소는 학습용 클론이며 원작과 무관합니다.
